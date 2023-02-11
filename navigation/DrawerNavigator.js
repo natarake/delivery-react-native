@@ -1,6 +1,6 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import ClientNavigator from "./ClientNavigator";
+import ClientNavigator from "./TabNavigator";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import BusinessConsole from "../screens/BusinessConsole";

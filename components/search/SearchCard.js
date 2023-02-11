@@ -7,13 +7,12 @@ import {
   ImageBackground,
   StyleSheet,
   Dimensions,
-  ScrollView,
 } from "react-native";
 import { FeaturedCategories } from "../../data";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-const SearchCard = () => {
+const SearchCard = ({ navigation }) => {
   return (
     <View className="mt-4">
       <FlatList
@@ -26,7 +25,11 @@ const SearchCard = () => {
         }
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() =>
+              navigation.navigate("SearchResult", { item: item.name })
+            }
+          >
             <View style={styles.imageView}>
               <ImageBackground
                 source={{ uri: item.image }}

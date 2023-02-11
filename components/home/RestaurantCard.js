@@ -10,9 +10,9 @@ const RestaurantCard = ({ imgUrl }) => {
         className="h-36 w-64 rounded-t-md"
         resizeMode="contain"
       />
-      <View className="px-3 pb-4">
+      <View className="px-3 pb-2">
         <Text className="font-bold text-lg pt-2">McDonalds</Text>
-        <View className="flex-row items-center space-x-1 mt-[2px]">
+        <View className="flex-row items-center space-x-1 my-[2px]">
           <MaterialCommunityIcons name="star" size={16} color="#ff8c52" />
           <Text className="text-[#ff8c52] text-xs font-medium">4.5</Text>
           <Text className="text-gray-500 text-xs">·</Text>

@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import Home from "../screens/Home";
-import Search from "../screens/Search";
 import MyOrders from "../screens/MyOrders";
 import MyAccount from "../screens/MyAccount";
+import SearchNavigator from "./SearchNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,8 +34,8 @@ const ClientNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={Search}
+        name="SearchNavigator"
+        component={SearchNavigator}
         options={{
           tabBarLabel: "Search",
           tabBarIcon: ({ color, size }) => (

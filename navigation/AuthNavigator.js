@@ -3,9 +3,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Welcome from "../screens/Welcome";
 import Login from "../screens/Login";
 import Home from "../screens/Home";
-import ClientNavigator from "./ClientNavigator";
+import TabNavigator from "./TabNavigator";
 import Map from "../screens/Map";
 import DrawerNavigator from "./DrawerNavigator";
+import SearchResult from "../screens/SearchResult";
 
 const AuthStack = createNativeStackNavigator();
 
@@ -36,6 +37,13 @@ const AuthNavigator = () => {
       <AuthStack.Screen
         name="Map"
         component={Map}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <AuthStack.Screen
+        name="SearchResult"
+        component={SearchResult}
         options={{
           headerShown: false,
         }}

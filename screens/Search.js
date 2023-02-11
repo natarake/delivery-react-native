@@ -96,7 +96,7 @@ const Search = () => {
                 <TouchableOpacity
                   onPress={() => {
                     Keyboard.dismiss;
-                    navigation.navigate("Search", { item: item.name });
+                    navigation.navigate("SearchResult", { item: item.name });
                     setOpen(false);
                     setFocused(true);
                   }}
@@ -110,7 +110,7 @@ const Search = () => {
           </View>
         </Modal>
       </View>
-      <SearchCard />
+      <SearchCard navigation={navigation} />
     </View>
   );
 };
